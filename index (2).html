@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponte - Conectando você ao seu futuro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-ponte {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+        .gradient-ponte-light {
+            background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .bridge-animation {
+            position: relative;
+        }
+        .bridge-animation::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #3B82F6;
+            top: 50%;
+            left: -30px;
+            animation: bridge-build 2s infinite;
+        }
+        @keyframes bridge-build {
+            0%, 100% { width: 0; opacity: 0; }
+            50% { width: 60px; opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navegação -->
+    <nav class="gradient-ponte text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-bridge text-3xl mr-3"></i>
+                    <div>
+                        <span class="font-bold text-2xl">Ponte</span>
+                        <p class="text-xs text-blue-100">Conectando você ao seu futuro</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-200 transition">Início</a>
+                    <a href="#sobre" class="hover:text-blue-200 transition">Sobre</a>
+                    <a href="#servicos" class="hover:text-blue-200 transition">Serviços</a>
+                    <a href="#inscricao" class="hover:text-blue-200 transition">Inscrição</a>
+                    <a href="#contato" class="hover:text-blue-200 transition">Contato</a>
+                </div>
+                <button id="menuBtn" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobileMenu" class="hidden md:hidden pb-4">
+            <a href="#home" class="block px-4 py-2 hover:bg-blue-800">Início</a>
+            <a href="#sobre" class="block px-4 py-2 hover:bg-blue-800">Sobre</a>
+            <a href="#servicos" class="block px-4 py-2 hover:bg-blue-800">Serviços</a>
+            <a href="#inscricao" class="block px-4 py-2 hover:bg-blue-800">Inscrição</a>
+            <a href="#contato" class="block px-4 py-2 hover:bg-blue-800">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-ponte text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block mb-8">
+                    <i class="fas fa-bridge text-8xl opacity-20"></i>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Ponte
+                </h1>
+                <p class="text-2xl md:text-3xl mb-4 font-light">
+                    Conectando você ao seu futuro
+                </p>
+                <div class="flex items-center justify-center space-x-4 mb-8">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+                    </div>
+                    <div class="bridge-animation">
+                        <i class="fas fa-minus text-2xl"></i>
+                    </div>
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-briefcase text-blue-600 text-xl"></i>
+                    </div>
+                </div>
+                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-blue-100">
+                    A ponte entre a sua formação acadêmica e o mercado de trabalho. 
+                    Preparamos você para conquistar seu espaço profissional com confiança e competência.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#inscricao" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition text-lg shadow-lg">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Atravesse a Ponte
+                    </a>
+                    <a href="#sobre" class="border-2 border-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition text-lg">
+                        <i class="fas fa-info-circle mr-2"></i>Conheça o Projeto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por que Ponte? -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Por que "Ponte"?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Uma ponte conecta dois pontos, supera obstáculos e abre caminhos. 
+                    Assim como uma ponte, estamos aqui para conectar você ao seu futuro profissional.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-8 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-gray-800">Ponto A: Educação</h3>
+                    <p class="text-gray-600">
+                        Sua formação técnica no CETEP Sisal, conhecimentos e habilidades adquiridas.
+                    </p>
+                </div>
+                <div class="bg-blue-600 p-8 rounded-lg text-center text-white relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <i class="fas fa-bridge text-5xl text-blue-600"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 mt-8">
+                        <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">A Ponte: Preparação</h3>
+                    <p>
+                        Nosso projeto oferece as ferramentas, orientação e confiança 
+                        necessárias para atravessar com sucesso.
+                    </p>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-briefcase text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-gray-800">Ponto B: Carreira</h3>
+                    <p class="text-gray-600">
+                        O mercado de trabalho, suas oportunidades profissionais e crescimento na carreira.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Projeto -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Sobre o Projeto Ponte</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        O <strong>Ponte</strong> nasceu da observação de uma necessidade real: 
+                        <strong>70% dos alunos</strong> do CETEP Sisal não sabem como criar um currículo 
+                        profissional ou se comportar em entrevistas de emprego.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Desenvolvido por alunos de Administração e Recursos Humanos, o projeto 
+                        aplica na prática os conhecimentos teóricos aprendidos em sala de aula, 
+                        criando um espaço dedicado ao desenvolvimento pessoal e profissional dos estudantes.
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+                        <h3 class="font-bold text-lg mb-3 text-blue-800">
+                            <i class="fas fa-quote-left mr-2"></i>Nossa Missão
+                        </h3>
+                        <p class="text-gray-700 italic">
+                            "Ser a ponte que conecta estudantes ao mercado de trabalho, 
+                            oferecendo preparação completa e personalizada para que cada aluno 
+                            possa atravessar com confiança rumo ao seu futuro profissional."
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 mb-6">
+                        <h3 class="font-bold text-2xl mb-6 text-blue-600">Nosso Impacto</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-users text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-2xl text-gray-800">200+</p>
+                                    <p class="text-gray-600">Alunos Atendidos</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-file-alt text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-2xl text-gray-800">150+</p>
+                                    <p class="text-gray-600">Currículos Criados</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-comments text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-2xl text-gray-800">80+</p>
+                                    <p class="text-gray-600">Simulações Realizadas</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-certificate text-orange-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-2xl text-gray-800">50+</p>
+                                    <p class="text-gray-600">Cursos Concluídos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-ponte text-white p-6 rounded-lg text-center">
+                        <p class="text-lg font-semibold">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Atendimento toda quinta-feira
+                        </p>
+                        <p class="text-blue-100 mt-2">Turnos manhã e noite</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Oferecidos -->
+    <section id="servicos" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Atravesse a Ponte Conosco</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
+                Oferecemos um caminho completo de preparação profissional
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-white border-2 border-blue-100 p-6 rounded-lg card-hover hover:border-blue-600 transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Criação de Currículos</h3>
+                    <p class="text-gray-600 mb-4">
+                        Aprenda a criar currículos profissionais que destacam suas qualidades. 
+                        Incluindo formato Lattes e templates personalizados.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Modelos profissionais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Currículo Lattes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Export em PDF</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="bg-white border-2 border-blue-100 p-6 rounded-lg card-hover hover:border-blue-600 transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Simulações de Entrevistas</h3>
+                    <p class="text-gray-600 mb-4">
+                        Pratique entrevistas em ambiente seguro. Receba feedback sobre 
+                        postura, comunicação e apresentação profissional.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Feedback personalizado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Dinâmicas de grupo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Orientação sobre vestimenta</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="bg-white border-2 border-blue-100 p-6 rounded-lg card-hover hover:border-blue-600 transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Cursos SEBRAE</h3>
+                    <p class="text-gray-600 mb-4">
+                        Acesso a cursos sobre gestão do tempo, competências socioemocionais 
+                        e empreendedorismo com certificação reconhecida.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Gestão do tempo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Soft skills</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Certificação gratuita</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="bg-white border-2 border-blue-100 p-6 rounded-lg card-hover hover:border-blue-600 transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Atendimento Personalizado</h3>
+                    <p class="text-gray-600 mb-4">
+                        Agendamentos individuais com triagem prévia para identificar 
+                        suas necessidades específicas de desenvolvimento.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Atendimento individual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Horários flexíveis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Acompanhamento contínuo</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="bg-white border-2 border-blue-100 p-6 rounded-lg card-hover hover:border-blue-600 transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Preparação ENEM/Concursos</h3>
+                    <p class="text-gray-600 mb-4">
+                        Orientações sobre editais, documentação, estratégias de estudo 
+                        e dicas para provas.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Leitura de editais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Checklist de documentos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Estratégias de preparação</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="bg-white border-2 border-blue-100 p-6 rounded-lg card-hover hover:border-blue-600 transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Desenvolvimento Profissional</h3>
+                    <p class="text-gray-600 mb-4">
+                        Trabalho em equipe, comunicação, liderança e outras competências 
+                        essenciais para o ambiente corporativo.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Trabalho em equipe</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Comunicação efetiva</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                            <span class="text-gray-700">Inteligência emocional</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Como Atravessar a Ponte</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">4 passos simples para começar sua jornada profissional</p>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center relative">
+                    <div class="bg-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-4xl font-bold text-white">1</span>
+                    </div>
+                    <div class="hidden md:block absolute top-12 left-2/3 w-1/3 h-0.5 bg-blue-200"></div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Inscrição</h3>
+                    <p class="text-gray-600">Preencha o formulário de triagem online com suas informações</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="bg-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-4xl font-bold text-white">2</span>
+                    </div>
+                    <div class="hidden md:block absolute top-12 left-2/3 w-1/3 h-0.5 bg-blue-200"></div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Triagem</h3>
+                    <p class="text-gray-600">Analisamos suas necessidades e agendamos seu atendimento</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="bg-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-4xl font-bold text-white">3</span>
+                    </div>
+                    <div class="hidden md:block absolute top-12 left-2/3 w-1/3 h-0.5 bg-blue-200"></div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Preparação</h3>
+                    <p class="text-gray-600">Receba orientação personalizada toda quinta-feira</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <i class="fas fa-trophy text-white text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-800">Sucesso!</h3>
+                    <p class="text-gray-600">Conquiste sua vaga no mercado de trabalho</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Inscrição -->
+    <section id="inscricao" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Atravesse a Ponte Hoje</h2>
+                <p class="text-gray-600 text-lg">
+                    Preencha o formulário e dê o primeiro passo rumo ao seu futuro profissional
+                </p>
+            </div>
+            <form id="inscricaoForm" class="bg-gray-50 p-8 rounded-lg shadow-lg border-2 border-blue-100">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Nome Completo *</label>
+                        <input type="text" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">E-mail *</label>
+                        <input type="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition">
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Telefone/WhatsApp *</label>
+                        <input type="tel" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Turno *</label>
+                        <select required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition">
+                            <option value="">Selecione...</option>
+                            <option value="manha">Manhã</option>
+                            <option value="noite">Noite</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">Curso *</label>
+                    <select required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition">
+                        <option value="">Selecione seu curso...</option>
+                        <option value="agroecologia">Agroecologia</option>
+                        <option value="informatica">Informática</option>
+                        <option value="analises-clinicas">Análises Clínicas</option>
+                        <option value="nutricao">Nutrição</option>
+                        <option value="administracao">Administração</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">Serviços de Interesse *</label>
+                    <div class="space-y-3 bg-white p-4 rounded-lg border border-gray-200">
+                        <label class="flex items-center cursor-pointer hover:bg-blue-50 p-2 rounded transition">
+                            <input type="checkbox" class="mr-3 w-5 h-5 text-blue-600">
+                            <span class="text-gray-700">Criação de Currículo</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-blue-50 p-2 rounded transition">
+                            <input type="checkbox" class="mr-3 w-5 h-5 text-blue-600">
+                            <span class="text-gray-700">Simulação de Entrevista</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-blue-50 p-2 rounded transition">
+                            <input type="checkbox" class="mr-3 w-5 h-5 text-blue-600">
+                            <span class="text-gray-700">Cursos SEBRAE</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-blue-50 p-2 rounded transition">
+                            <input type="checkbox" class="mr-3 w-5 h-5 text-blue-600">
+                            <span class="text-gray-700">Preparação ENEM/Concursos</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-blue-50 p-2 rounded transition">
+                            <input type="checkbox" class="mr-3 w-5 h-5 text-blue-600">
+                            <span class="text-gray-700">Desenvolvimento Profissional</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">Conte-nos suas expectativas</label>
+                    <textarea rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition" placeholder="O que você espera do Ponte? Como podemos ajudar na sua preparação profissional?"></textarea>
+                </div>
+                <button type="submit" class="w-full gradient-ponte text-white py-4 rounded-lg font-bold hover:shadow-lg transition text-lg">
+                    <i class="fas fa-paper-plane mr-2"></i>Enviar Inscrição
+                </button>
+                <p class="text-center text-gray-500 text-sm mt-4">
+                    <i class="fas fa-lock mr-1"></i>Seus dados estão seguros conosco
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Quem Já Atravessou a Ponte</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Histórias de sucesso de nossos alunos</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                            M
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Maria Silva</h4>
+                            <p class="text-sm text-gray-600">Informática - 3º Ano</p>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "O Ponte me ajudou a criar meu primeiro currículo profissional. 
+                        A orientação foi incrível e consegui meu estágio logo depois!"
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                            J
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">João Santos</h4>
+                            <p class="text-sm text-gray-600">Agroecologia - Noturno</p>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "As simulações de entrevista me deram muita confiança. 
+                        Agora sei exatamente como me comportar e me destacar!"
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                            A
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-lg">Ana Costa</h4>
+                            <p class="text-sm text-gray-600">Nutrição - 3º Ano</p>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Os cursos do SEBRAE foram incríveis! O Ponte me ajudou a 
+                        desenvolver habilidades que nem sabia que precisava."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Entre em Contato</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-blue-600">Informações de Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Endereço</p>
+                                <p class="text-gray-600">CETEP Sisal<br>Rua Araci, SN - Cidade Nova<br>Serrinha - BA, CEP: 48700-000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-phone text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Telefone</p>
+                                <p class="text-gray-600">(75) 99198-8339</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-envelope text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">E-mail</p>
+                                <p class="text-gray-600">mecanografia.ceteps@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-clock text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Horário de Atendimento</p>
+                                <p class="text-gray-600">Quintas-feiras: Manhã e Noite<br>(Mediante agendamento prévio)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border-2 border-blue-100">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">Envie uma Mensagem</h3>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" placeholder="Seu Nome" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Seu E-mail" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition">
+                        </div>
+                        <div class="mb-4">
+                            <textarea rows="4" placeholder="Sua Mensagem" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full gradient-ponte text-white py-3 rounded-lg font-bold hover:shadow-lg transition">
+                            <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-ponte text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-bridge text-4xl mr-3"></i>
+                        <div>
+                            <h3 class="font-bold text-2xl">Ponte</h3>
+                            <p class="text-blue-200 text-sm">Conectando você ao seu futuro</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100 mb-4">
+                        Um projeto do CETEP Sisal dedicado a preparar estudantes 
+                        para o mercado de trabalho com excelência e profissionalismo.
+                    </p>
+                    <p class="text-sm text-blue-200">
+                        Desenvolvido por alunos de Administração e Recursos Humanos
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-blue-200 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Início</a></li>
+                        <li><a href="#sobre" class="hover:text-blue-200 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Sobre</a></li>
+                        <li><a href="#servicos" class="hover:text-blue-200 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Serviços</a></li>
+                        <li><a href="#inscricao" class="hover:text-blue-200 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Inscrição</a></li>
+                        <li><a href="#contato" class="hover:text-blue-200 transition flex items-center"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Siga-nos</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-blue-200">
+                        Acompanhe nossas novidades e dicas profissionais
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-blue-400 pt-6 text-center">
+                <p class="mb-2">&copy; 2025 Ponte - CETEP Sisal. Todos os direitos reservados.</p>
+                <p class="text-sm text-blue-200">
+                    <i class="fas fa-heart text-red-400 mx-1"></i>
+                    Desenvolvido com dedicação pelos alunos do CETEP
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Formulário de inscrição
+        document.getElementById('inscricaoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Inscrição enviada com sucesso!\n\nEm breve entraremos em contato para agendar seu atendimento.\n\nBem-vindo(a) ao Ponte! 🌉');
+            this.reset();
+        });
+
+        // Animação de entrada dos elementos
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card-hover').forEach((el) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
